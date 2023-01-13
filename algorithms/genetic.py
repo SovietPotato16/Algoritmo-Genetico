@@ -34,8 +34,7 @@ def single_point_crossover(a: Genome, b: Genome) -> Tuple[Genome, Genome]:
 def mutation(genome: Genome, num: int = 1, probability: float = 0.01) -> Genome:
     for _ in range(num):
         index = randrange(len(genome))
-        genome[index] = genome[index] if random() > probability else abs(genome[index] - 1)
-        
+        genome[index] = genome[index] if random() > probability else abs(genome[index] - 1)     
     return genome
 
 
@@ -108,3 +107,6 @@ def run_evolution(
         population = next_generation
 
     return population, i
+
+
+#un cambio
